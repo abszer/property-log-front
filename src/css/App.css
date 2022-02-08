@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+
+
