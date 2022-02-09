@@ -1,0 +1,19 @@
+.btn-primary {
+     /* width: 200px; */
+     height: 45px;
+     border: none;
+     border-radius: 5px;
+     background-color:rgb(118, 200, 255);
+     color: rgb(248, 247, 247);
+     font-size: 1.25rem;
+     font-weight: bold;
+   }
+   
+   .btn-primary:hover {
+     transition: all 0.2s;
+     background-color:rgb(68, 180, 255);
+     color: whitesmoke;
+     cursor: pointer;
+   }
+   
+   

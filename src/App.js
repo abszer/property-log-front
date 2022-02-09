@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './css/App.css';
 import Header from './components/Header';
 import LogInForm from './components/LogInForm';
+import CreateAccountForm from './components/CreateAccountForm';
 
 function App() {
   const [logInVisible, setLogInVisible] = useState(false)
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <div className='container'>
         <div className='welcome'>
-          <h2>Log In or Create Account</h2>
+          {/* <h2>Log In or Create Account</h2> */}
           <div className='btn-container'>
             <button onClick={ () => {setLogInVisible(true); setCreateAccountVisible(false)} } className='btn-primary'>
               Log In
@@ -23,6 +24,7 @@ function App() {
             </button>
           </div>
           { logInVisible && <LogInForm /> }
+          { createAccountVisible && <CreateAccountForm />}
         </div>
       </div>
 
