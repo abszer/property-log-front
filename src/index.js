@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import UserAuth from './components/UserAuth';
+// import UserAuth from './components/UserAuth';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}/>
-        <Route path="/userauth" element={<UserAuth />}/>
+        {/* <Route path="/userauth" element={<UserAuth />}/> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
