@@ -3,18 +3,27 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-// import UserAuth from './components/UserAuth';
 import reportWebVitals from './reportWebVitals';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
+import rootReducer from './reducers/rootReducer'
+
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}/>
-        {/* <Route path="/userauth" element={<UserAuth />}/> */}
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}/>
+          {/* <Route path="/userauth" element={<UserAuth />}/> */}
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
